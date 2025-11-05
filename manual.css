@@ -1,0 +1,294 @@
+/* ===== ESTILOS BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===== HEADER CON MENÚ HAMBURGUESA ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #d10a10;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Navegación Hamburguesa */
+nav {
+    position: relative;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-icon span {
+    display: block;
+    height: 4px;
+    background: #d10a10;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #d10a10;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #d10a10;
+    color: white;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.manual-container {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.section-block {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-left: 4px solid #d10a10;
+}
+
+.section-block h2 {
+    color: #d10a10;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.section-block h3 {
+    color: #333;
+    font-size: 1.3rem;
+    margin: 25px 0 15px 0;
+}
+
+.section-block p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.section-block ul, 
+.section-block ol {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.section-block li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Secciones con fondo oscuro */
+.dark-bg {
+    background-color: #f8f9fa;
+    border-left: 4px solid #d10a10;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th {
+    background-color: #d10a10;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+table tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Nota importante */
+.note {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 15px;
+    border-left: 5px solid #ffc107;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* ===== FOOTER ===== */
+.manual-footer {
+    background-color: #d10a10;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: auto;
+}
+
+.manual-footer p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    /* Header responsive */
+    .menu-icon {
+        display: flex;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        border-radius: 8px;
+        width: 200px;
+        z-index: 999;
+        padding: 10px 0;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 12px 20px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    #menu-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+    
+    .logo h1 {
+        font-size: 1rem;
+    }
+    
+    /* Contenido responsive */
+    .manual-container {
+        padding: 20px 15px;
+    }
+    
+    .section-block {
+        padding: 20px;
+    }
+    
+    .section-block h2 {
+        font-size: 1.5rem;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    table th,
+    table td {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    .manual-container {
+        padding: 15px 10px;
+    }
+    
+    .section-block {
+        padding: 15px;
+    }
+    
+    .section-block h2 {
+        font-size: 1.3rem;
+    }
+    
+    .manual-footer {
+        padding: 20px 15px;
+    }
+    
+    .manual-footer p {
+        font-size: 0.9rem;
+    }
+}
