@@ -130,7 +130,7 @@ nav {
 
 /* === Banner === */
 .banner-subfondo {
-    background-image: url('Imagenes/fondos.jpg');
+    background-image: url('imagenes/fondos.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
